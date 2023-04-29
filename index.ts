@@ -35,7 +35,6 @@ app.get("/api/images/", (req:Request, res:Response) => {
         // res.send(data)
     }
     sendData();
-
 })
 
 const port = process.env.PORT || 3000;
