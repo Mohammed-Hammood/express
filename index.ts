@@ -18,7 +18,7 @@ app.use('/static', express.static('public'));
 
 app.use(cors({
 
-    origin:["https://worldoffreetools.com", "http://localhost:3000", "http://localhost:3001"]
+    origin:["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
 
 app.get("/", function(req:Request, res:Response){

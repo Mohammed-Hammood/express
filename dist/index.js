@@ -24,7 +24,7 @@ const path = require("path");
 const app = (0, express_1.default)();
 app.use('/static', express_1.default.static('public'));
 app.use((0, cors_1.default)({
-    origin: ["https://worldoffreetools.com", "http://localhost:3000", "http://localhost:3001"]
+    origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
 app.get("/", function (req, res) {
     // res.sendFile(path.join(__dirname, './pages/index.html'));
