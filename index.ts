@@ -23,7 +23,7 @@ app.use(cors({
 
 app.get("/", function(req:Request, res:Response){
     // res.sendFile(path.join(__dirname, './pages/index.html'));
-    res.send("Photo gallery API")
+   return res.send("Photo gallery API")
 })
 app.get("/api/images/", (req:Request, res:Response) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));

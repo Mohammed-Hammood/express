@@ -28,7 +28,7 @@ app.use((0, cors_1.default)({
 }));
 app.get("/", function (req, res) {
     // res.sendFile(path.join(__dirname, './pages/index.html'));
-    res.send("Photo gallery API");
+    return res.send("Photo gallery API");
 });
 app.get("/api/images/", (req, res) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));
