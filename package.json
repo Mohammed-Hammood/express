@@ -29,7 +29,7 @@
     "typescript": "^5.0.4"
   },
   "repository": "https://github.com/alamiriMd/express.git",
-  "author": "<iraqiProfessionalDesigner@gmail.com>",
+  "author": "",
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "rimraf": "^5.0.0"
