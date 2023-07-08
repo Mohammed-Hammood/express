@@ -27,8 +27,8 @@ app.get("/", function(req:Request, res:Response){
    return res.send("Photo gallery API")
 })
 app.get("/api/events/", (req:Request, res:Response)=> {
-    console.log('event')
-    res.send(events)
+    res.status(200);
+    res.send(events);
 })
 
 app.get("/api/images/", (req:Request, res:Response) => {

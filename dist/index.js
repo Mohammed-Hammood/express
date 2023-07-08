@@ -32,7 +32,7 @@ app.get("/", function (req, res) {
     return res.send("Photo gallery API");
 });
 app.get("/api/events/", (req, res) => {
-    console.log('event');
+    res.status(200);
     res.send(events_json_1.default);
 });
 app.get("/api/images/", (req, res) => {
