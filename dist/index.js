@@ -13,9 +13,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-// import fetch   from 'node-fetch';
 const cors_1 = __importDefault(require("cors"));
+const events_json_1 = __importDefault(require("./public/data/events.json"));
 const images_json_1 = __importDefault(require("./public/data/images.json"));
+// import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
 // const fetch   = require('node-fetch');
 const dotenv = require("dotenv");
@@ -29,6 +30,10 @@ app.use((0, cors_1.default)({
 app.get("/", function (req, res) {
     // res.sendFile(path.join(__dirname, './pages/index.html'));
     return res.send("Photo gallery API");
+});
+app.get("/api/events/", (req, res) => {
+    console.log('event');
+    res.send(events_json_1.default);
 });
 app.get("/api/images/", (req, res) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));

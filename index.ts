@@ -1,7 +1,8 @@
 import express, {Request, Response, Express} from 'express';
-// import fetch   from 'node-fetch';
 import cors from 'cors';
-import images from './public/data/images.json'
+import events from './public/data/events.json';
+import images from './public/data/images.json';
+// import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
 
 // const fetch   = require('node-fetch');
@@ -25,6 +26,11 @@ app.get("/", function(req:Request, res:Response){
     // res.sendFile(path.join(__dirname, './pages/index.html'));
    return res.send("Photo gallery API")
 })
+app.get("/api/events/", (req:Request, res:Response)=> {
+    console.log('event')
+    res.send(events)
+})
+
 app.get("/api/images/", (req:Request, res:Response) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));
     const sendData = async ()=> {
@@ -36,6 +42,7 @@ app.get("/api/images/", (req:Request, res:Response) => {
     }
     sendData();
 })
+
 
 const port = process.env.PORT || 3000;
 
