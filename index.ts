@@ -20,13 +20,13 @@ app.use('/static', express.static('public'));
 app.set('view engine', 'ejs');
 
 app.use(cors({
-
     origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
 
 app.get("/", function (req: Request, res: Response) {
     res.status(200)
-    res.render('pages/index')
+    // res.render('pages/index')
+    res.send('endpoints')
 })
 app.get("/api/events/", (req: Request, res: Response) => {
     res.status(200);
@@ -35,14 +35,13 @@ app.get("/api/events/", (req: Request, res: Response) => {
 
 app.get("/api/images/", (req: Request, res: Response) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));
-    const sendData = async () => {
+    // const sendData = async () => {
 
-        // const response = await fetch("https://worldoftechnology.pythonanywhere.com/api/images/?order=-id&limit=200&page=1&query=&category=all")
-        // const data = await response.json();
-        res.send(images)
-        // res.send(data)
-    }
-    sendData();
+    //     // const response = await fetch("https://worldoftechnology.pythonanywhere.com/api/images/?order=-id&limit=200&page=1&query=&category=all")
+    //     // const data = await response.json();
+    //     // res.send(data)
+    // }
+    res.send(images)
 })
 
 
