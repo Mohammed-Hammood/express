@@ -25,9 +25,9 @@ app.use(cors({
     origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
 
-app.use(express.static('public'))
+app.use('static', express.static('public'))
 app.get("/", function (req: Request, res: Response) {
-    res.status(200)
+    res.status(200);
     res.send(homePage);
     // res.send('endpoints')
 })
