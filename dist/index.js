@@ -21,8 +21,8 @@ app.use((0, cors_1.default)({
 }));
 app.get("/", function (req, res) {
     res.status(200);
-    // res.render('pages/index')
-    res.send('endpoints');
+    res.render('pages/index');
+    // res.send('endpoints')
 });
 app.get("/api/events/", (req, res) => {
     res.status(200);

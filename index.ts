@@ -25,8 +25,8 @@ app.use(cors({
 
 app.get("/", function (req: Request, res: Response) {
     res.status(200)
-    // res.render('pages/index')
-    res.send('endpoints')
+    res.render('pages/index')
+    // res.send('endpoints')
 })
 app.get("/api/events/", (req: Request, res: Response) => {
     res.status(200);
