@@ -3,6 +3,7 @@ import cors from 'cors';
 import events from './public/data/events.json';
 import images from './public/data/images.json';
 import { homePage } from './public/pages/index';
+
 // import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
 
@@ -12,11 +13,11 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-// const path = require("path");
+const path = require("path");
 
 const app: Express = express();
 
-app.use('/static', express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', './views')
 app.set('view engine', 'ejs');
@@ -25,10 +26,14 @@ app.use(cors({
     origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
 
-app.use('static', express.static('public'))
+
+// app.use('/static', express.static(path.join(__dirname, 'public')));
+
+
 app.get("/", function (req: Request, res: Response) {
     res.status(200);
     res.send(homePage);
+    // res.sendFile(__dirname + "/views/pages/home.html");
     // res.send('endpoints')
 })
 app.get("/api/events/", (req: Request, res: Response) => {

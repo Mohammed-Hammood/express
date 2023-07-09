@@ -13,18 +13,19 @@ const index_1 = require("./public/pages/index");
 // const fetch   = require('node-fetch');
 const dotenv = require("dotenv");
 dotenv.config();
-// const path = require("path");
+const path = require("path");
 const app = (0, express_1.default)();
-app.use('/static', express_1.default.static('public'));
+app.use(express_1.default.static(path.join(__dirname, 'public')));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use((0, cors_1.default)({
     origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
-app.use('static', express_1.default.static('public'));
+// app.use('/static', express.static(path.join(__dirname, 'public')));
 app.get("/", function (req, res) {
     res.status(200);
     res.send(index_1.homePage);
+    // res.sendFile(__dirname + "/views/pages/home.html");
     // res.send('endpoints')
 });
 app.get("/api/events/", (req, res) => {
