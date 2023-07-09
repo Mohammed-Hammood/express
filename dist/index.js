@@ -21,6 +21,7 @@ app.set('view engine', 'ejs');
 app.use((0, cors_1.default)({
     origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
+app.use(express_1.default.static('public'));
 app.get("/", function (req, res) {
     res.status(200);
     res.send(index_1.homePage);
