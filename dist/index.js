@@ -21,15 +21,16 @@ const images_json_1 = __importDefault(require("./public/data/images.json"));
 // const fetch   = require('node-fetch');
 const dotenv = require("dotenv");
 dotenv.config();
-const path = require("path");
+// const path = require("path");
 const app = (0, express_1.default)();
 app.use('/static', express_1.default.static('public'));
+app.set('view engine', 'ejs');
 app.use((0, cors_1.default)({
     origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
 app.get("/", function (req, res) {
-    // res.sendFile(path.join(__dirname, './pages/index.html'));
-    return res.send("Photo gallery API");
+    res.status(200);
+    res.render('pages/index');
 });
 app.get("/api/events/", (req, res) => {
     res.status(200);
