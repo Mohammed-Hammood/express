@@ -7,6 +7,7 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const events_json_1 = __importDefault(require("./public/data/events.json"));
 const images_json_1 = __importDefault(require("./public/data/images.json"));
+const index_1 = require("./public/pages/index");
 // import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
 // const fetch   = require('node-fetch');
@@ -15,13 +16,14 @@ dotenv.config();
 // const path = require("path");
 const app = (0, express_1.default)();
 app.use('/static', express_1.default.static('public'));
+app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use((0, cors_1.default)({
     origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
 }));
 app.get("/", function (req, res) {
     res.status(200);
-    res.render('pages/index');
+    res.send(index_1.homePage);
     // res.send('endpoints')
 });
 app.get("/api/events/", (req, res) => {

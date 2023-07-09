@@ -2,11 +2,12 @@ import express, { Request, Response, Express } from 'express';
 import cors from 'cors';
 import events from './public/data/events.json';
 import images from './public/data/images.json';
+import { homePage } from './public/pages/index';
 // import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
 
 // const fetch   = require('node-fetch');
- 
+
 const dotenv = require("dotenv");
 
 dotenv.config();
@@ -17,6 +18,7 @@ const app: Express = express();
 
 app.use('/static', express.static('public'));
 
+app.set('views', './views')
 app.set('view engine', 'ejs');
 
 app.use(cors({
@@ -25,7 +27,7 @@ app.use(cors({
 
 app.get("/", function (req: Request, res: Response) {
     res.status(200)
-    res.render('pages/index')
+    res.send(homePage);
     // res.send('endpoints')
 })
 app.get("/api/events/", (req: Request, res: Response) => {
