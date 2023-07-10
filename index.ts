@@ -27,7 +27,7 @@ app.use(cors({
         "https://photo-gallery10.vercel.app", 
         "http://localhost:3000", 
         "http://localhost:3001",
-        "https://events-history.vecel.app",
+        "https://events-history.vercel.app",
     ]
 }));
 

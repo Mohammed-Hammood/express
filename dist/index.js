@@ -23,7 +23,7 @@ app.use((0, cors_1.default)({
         "https://photo-gallery10.vercel.app",
         "http://localhost:3000",
         "http://localhost:3001",
-        "https://events-history.vecel.app",
+        "https://events-history.vercel.app",
     ]
 }));
 // app.use('/static', express.static(path.join(__dirname, 'public')));
