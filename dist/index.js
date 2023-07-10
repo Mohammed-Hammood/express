@@ -19,7 +19,12 @@ app.use(express_1.default.static(path.join(__dirname, 'public')));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use((0, cors_1.default)({
-    origin: ["https://photo-gallery10.vercel.app", "http://localhost:3000", "http://localhost:3001"]
+    origin: [
+        "https://photo-gallery10.vercel.app",
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "https://events-history.vecel.app",
+    ]
 }));
 // app.use('/static', express.static(path.join(__dirname, 'public')));
 app.get("/", function (req, res) {
