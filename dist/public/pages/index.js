@@ -86,6 +86,17 @@ exports.homePage = `<!DOCTYPE html>
                 <button onclick="copyEndpoint('/api/events')">copy</button>
             </span>
         </div>
+        <div class="links">
+            <span class="title">Users </span>
+            <span class="endpoint">
+                <a href="/api/users">api/users</a>
+                <button onclick="copyEndpoint('/api/users')">copy</button>
+            </span>
+        </div>
+
+        <div>
+            You can search for a specific user like /api/users?q=json
+        </div>
     </main>
     <script>
         function copyEndpoint(endpoint){
