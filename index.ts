@@ -25,9 +25,9 @@ app.set('view engine', 'ejs');
 
 app.use(cors({
     origin: [
-        "https://photo-gallery10.vercel.app",
         "http://localhost:3000",
         "http://localhost:3001",
+        "https://photo-gallery10.vercel.app",
         "https://events-history.vercel.app",
         "https://users-contacts.vercel.app",
         "https://users-contact.vercel.app",
