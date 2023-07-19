@@ -26,6 +26,7 @@ app.use((0, cors_1.default)({
         "http://localhost:3001",
         "https://events-history.vercel.app",
         "https://users-contacts.vercel.app",
+        "https://users-contact.vercel.app",
     ]
 }));
 // app.use('/static', express.static(path.join(__dirname, 'public')));
