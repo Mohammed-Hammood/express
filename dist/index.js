@@ -40,12 +40,13 @@ app.get("/api/events/", (req, res) => {
 });
 app.get("/api/users/", (req, res) => {
     var _a;
-    res.status(200);
     if ((_a = req.query.q) === null || _a === void 0 ? void 0 : _a.toString()) {
         const q = req.query.q.toString().toLowerCase();
         const newUsers = users_json_1.default.filter(user => user.name.toLowerCase().includes(q));
+        res.status(200);
         return res.send(newUsers);
     }
+    res.status(200);
     res.send(users_json_1.default);
 });
 app.get("/api/images/", (req, res) => {

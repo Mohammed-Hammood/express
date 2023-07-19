@@ -49,16 +49,17 @@ app.get("/api/events/", (req: Request, res: Response) => {
 });
 
 app.get("/api/users/", (req: Request, res: Response) => {
-    res.status(200);
-
+    
     if (req.query.q?.toString()) {
-
+        
         const q: string = req.query.q.toString().toLowerCase();
-
+        
         const newUsers = users.filter(user => user.name.toLowerCase().includes(q));
-
+        
+        res.status(200);
         return res.send(newUsers);
     }
+    res.status(200);
     res.send(users);
 
 })
