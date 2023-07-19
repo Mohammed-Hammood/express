@@ -29,6 +29,7 @@ app.use(cors({
         "http://localhost:3000",
         "http://localhost:3001",
         "https://events-history.vercel.app",
+        "https://users-contacts.vercel.app",
     ]
 }));
 
