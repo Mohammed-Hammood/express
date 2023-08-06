@@ -29,6 +29,7 @@ app.use((0, cors_1.default)({
         "https://events-history.vercel.app",
         "https://users-contacts.vercel.app",
         "https://users-contact.vercel.app",
+        "https://online-market-1.vercel.app",
     ]
 }));
 // app.use('/static', express.static(path.join(__dirname, 'public')));
