@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const events_json_1 = __importDefault(require("./public/data/events.json"));
 const images_json_1 = __importDefault(require("./public/data/images.json"));
 const users_json_1 = __importDefault(require("./public/data/users.json"));
+const proudcts_json_1 = __importDefault(require("./public/data/proudcts.json"));
 const index_1 = require("./public/pages/index");
 // import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
@@ -23,6 +24,7 @@ app.use((0, cors_1.default)({
     origin: [
         "http://localhost:3000",
         "http://localhost:3001",
+        "http://localhost:5173",
         "https://photo-gallery10.vercel.app",
         "https://events-history.vercel.app",
         "https://users-contacts.vercel.app",
@@ -39,6 +41,34 @@ app.get("/", function (req, res) {
 app.get("/api/events/", (req, res) => {
     res.status(200);
     res.send(events_json_1.default);
+});
+app.get("/api/products/", (req, res) => {
+    const { query, category, limit, skip } = req.query;
+    let data = proudcts_json_1.default;
+    if (category) {
+        data = proudcts_json_1.default.filter(item => category === 'all' || item.category === category);
+    }
+    if (query && query.toString().trim().length > 0) {
+        let q = query.toString().toLowerCase();
+        data = data.filter(item => item.brand.toLowerCase().includes(q) ||
+            item.description.toLowerCase().includes(q) ||
+            item.title.toLowerCase().includes(q));
+    }
+    if (limit && skip && typeof limit === 'string' && typeof skip === 'string') {
+        let limit_ = parseInt(limit);
+        let skip_ = parseInt(skip);
+        data = data.filter((item, index) => index > skip_ && index < limit_);
+    }
+    let total = data.length;
+    res.status(200).send({
+        ok: true,
+        data,
+        total,
+        query,
+        category,
+        limit,
+        skip,
+    });
 });
 app.get("/api/users/", (req, res) => {
     var _a;

@@ -3,6 +3,7 @@ import cors from 'cors';
 import events from './public/data/events.json';
 import images from './public/data/images.json';
 import users from './public/data/users.json';
+import products from './public/data/proudcts.json';
 import { homePage } from './public/pages/index';
 
 // import fetch   from 'node-fetch';
@@ -27,6 +28,7 @@ app.use(cors({
     origin: [
         "http://localhost:3000",
         "http://localhost:3001",
+        "http://localhost:5173",
         "https://photo-gallery10.vercel.app",
         "https://events-history.vercel.app",
         "https://users-contacts.vercel.app",
@@ -50,14 +52,48 @@ app.get("/api/events/", (req: Request, res: Response) => {
     res.send(events);
 });
 
+
+app.get("/api/products/", (req: Request, res: Response) => {
+    const { query, category, limit, skip } = req.query;
+    let data = products;
+    if (category) {
+        data = products.filter(item => category === 'all' || item.category === category)
+    }
+    if (query && query.toString().trim().length > 0) {
+        let q: string = query.toString().toLowerCase();
+        data = data.filter(item =>
+            item.brand.toLowerCase().includes(q) ||
+            item.description.toLowerCase().includes(q) ||
+            item.title.toLowerCase().includes(q)
+        )
+    }
+    if (limit && skip && typeof limit === 'string' && typeof skip === 'string' ){
+        let limit_ = parseInt(limit)
+        let skip_ = parseInt(skip)
+        data = data.filter((item, index:number) => index > skip_ && index < limit_);
+    }
+
+    let total:number = data.length;
+
+    res.status(200).send({
+        ok: true,
+        data,
+        total,
+        query,
+        category,
+        limit,
+        skip,
+    })
+})
+
 app.get("/api/users/", (req: Request, res: Response) => {
-    
+
     if (req.query.q?.toString()) {
-        
+
         const q: string = req.query.q.toString().toLowerCase();
-        
+
         const newUsers = users.filter(user => user.name.toLowerCase().includes(q));
-        
+
         res.status(200);
         return res.send(newUsers);
     }

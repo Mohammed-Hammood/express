@@ -94,6 +94,16 @@ export const homePage = `<!DOCTYPE html>
         <div>
             You can search for a specific user like /api/users?q=json
         </div>
+    
+        <div class="links">
+        <span class="title">Products </span>
+        <span class="endpoint">
+            <a href="/api/products">api/products</a>
+            <button onclick="copyEndpoint('/api/products')">copy</button>
+        </span>
+        <div>Params are category:String, limit:Number, skip:Number, query:String</string>
+        
+    </div>
     </main>
     <script>
         function copyEndpoint(endpoint){
