@@ -71,7 +71,7 @@ app.get("/api/products/", (req: Request, res: Response) => {
     if (limit && skip && typeof limit === 'string' && typeof skip === 'string' ){
         let limit_ = parseInt(limit)
         let skip_ = parseInt(skip)
-        data = data.filter((item, index:number) => index > skip_ && index < limit_);
+        data = data.filter((_, index:number) => index >= skip_ && index < limit_);
     }
 
     let total:number = data.length;

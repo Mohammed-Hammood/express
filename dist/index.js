@@ -58,7 +58,7 @@ app.get("/api/products/", (req, res) => {
     if (limit && skip && typeof limit === 'string' && typeof skip === 'string') {
         let limit_ = parseInt(limit);
         let skip_ = parseInt(skip);
-        data = data.filter((item, index) => index > skip_ && index < limit_);
+        data = data.filter((_, index) => index >= skip_ && index < limit_);
     }
     let total = data.length;
     res.status(200).send({
