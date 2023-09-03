@@ -27,7 +27,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({ extended:true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.use(cors({
@@ -62,7 +62,9 @@ app.get("/api/events/", (req: Request, res: Response) => {
 
 app.get("/api/products/", (req: Request, res: Response) => {
     const { query, category, limit, skip } = req.query;
+    
     let data = products;
+
     if (category) {
         data = products.filter(item => category === 'all' || item.category === category)
     }
@@ -74,13 +76,13 @@ app.get("/api/products/", (req: Request, res: Response) => {
             item.title.toLowerCase().includes(q)
         )
     }
-    if (limit && skip && typeof limit === 'string' && typeof skip === 'string' ){
+    if (limit && skip && typeof limit === 'string' && typeof skip === 'string') {
         let limit_ = parseInt(limit)
         let skip_ = parseInt(skip)
-        data = data.filter((_, index:number) => index >= skip_ && index < limit_);
+        data = data.filter((_, index: number) => index >= skip_ && index < limit_);
     }
 
-    let total:number = data.length;
+    let total: number = data.length;
 
     res.status(200).send({
         ok: true,
@@ -112,32 +114,32 @@ app.get("/api/users/", (req: Request, res: Response) => {
 
 app.get("/api/images/", (req: Request, res: Response) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));
-   
+
     res.send(images)
 })
 
- 
 
-app.post("/api/auth/login", (req:Request, res:Response)=> {
-    
-    const {username, password } = req.body
-    
-    if (!username || !password ){
+
+app.post("/api/auth/login", (req: Request, res: Response) => {
+
+    const { username, password } = req.body
+
+    if (!username || !password) {
         return res.status(400).send({
             'error': 'Username and password are required'
         })
     }
-    
-    const user  = users.find(item => item.username === username);
-  
 
-    
-    if (!user || password !== 'password')return res.status(401).send({
+    const user = users.find(item => item.username === username);
+
+
+
+    if (!user || password !== 'password') return res.status(401).send({
         'error': 'Username or password is not correct'
     })
-    
+
     return res.status(200).send(user);
-    
+
 })
 
 const port = process.env.PORT || 5000;

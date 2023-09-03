@@ -898,5 +898,23 @@
         "instruction": 1,
         "notifications_count": 90,
         "random_number": 225
+    },
+    {
+        "id": 51,
+        "name": "Евгений Андреевич Санников",
+        "phone": "7-902-886-2319",
+        "email": "syncov.20@yandex.ru",
+        "address": "P.O. Box 303, 9462 Sodales. Ave",
+        "position_name": "Construction Manager",
+        "department": "nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor",
+        "hire_date": "Dec 15, 2020",
+        "username": "user_51",
+        "birthday": "15-04-1995",
+        "completed_tests": 41,
+        "certification_after": 3,
+        "preshift_examiner": 10,
+        "instruction": 10,
+        "notifications_count": 9,
+        "random_number": 225
     }
 ]
