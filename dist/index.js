@@ -10,6 +10,7 @@ const images_json_1 = __importDefault(require("./public/data/images.json"));
 const users_json_1 = __importDefault(require("./public/data/users.json"));
 const proudcts_json_1 = __importDefault(require("./public/data/proudcts.json"));
 const index_1 = require("./public/pages/index");
+const body_parser_1 = __importDefault(require("body-parser"));
 // import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
 // const fetch   = require('node-fetch');
@@ -20,6 +21,8 @@ const app = (0, express_1.default)();
 app.use(express_1.default.static(path.join(__dirname, 'public')));
 app.set('views', './views');
 app.set('view engine', 'ejs');
+app.use(body_parser_1.default.json());
+app.use(body_parser_1.default.urlencoded({ extended: true }));
 app.use((0, cors_1.default)({
     origin: [
         "http://localhost:3000",
@@ -84,16 +87,25 @@ app.get("/api/users/", (req, res) => {
 });
 app.get("/api/images/", (req, res) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));
-    // const sendData = async () => {
-    //     // const response = await fetch("https://worldoftechnology.pythonanywhere.com/api/images/?order=-id&limit=200&page=1&query=&category=all")
-    //     // const data = await response.json();
-    //     // res.send(data)
-    // }
     res.send(images_json_1.default);
+});
+app.post("/api/auth/login", (req, res) => {
+    const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).send({
+            'error': 'Username and password are required'
+        });
+    }
+    const user = users_json_1.default.find(item => item.username === username);
+    if (!user || password !== 'password')
+        return res.status(401).send({
+            'error': 'Username or password is not correct'
+        });
+    return res.status(200).send(user);
 });
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-    console.log('Server is running at port ', port);
+    console.log(`Server is running at http://localhost:${port}`);
 });
 module.exports = app;
 //# sourceMappingURL=index.js.map

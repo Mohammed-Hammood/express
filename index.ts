@@ -5,6 +5,7 @@ import images from './public/data/images.json';
 import users from './public/data/users.json';
 import products from './public/data/proudcts.json';
 import { homePage } from './public/pages/index';
+import bodyParser from 'body-parser';
 
 // import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
@@ -23,6 +24,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', './views')
 app.set('view engine', 'ejs');
+
+app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({ extended:true}));
+
 
 app.use(cors({
     origin: [
@@ -106,20 +112,38 @@ app.get("/api/users/", (req: Request, res: Response) => {
 
 app.get("/api/images/", (req: Request, res: Response) => {
     // res.sendFile(path.join(__dirname, 'pages/index.html'));
-    // const sendData = async () => {
-
-    //     // const response = await fetch("https://worldoftechnology.pythonanywhere.com/api/images/?order=-id&limit=200&page=1&query=&category=all")
-    //     // const data = await response.json();
-    //     // res.send(data)
-    // }
+   
     res.send(images)
 })
 
+ 
+
+app.post("/api/auth/login", (req:Request, res:Response)=> {
+    
+    const {username, password } = req.body
+    
+    if (!username || !password ){
+        return res.status(400).send({
+            'error': 'Username and password are required'
+        })
+    }
+    
+    const user  = users.find(item => item.username === username);
+  
+
+    
+    if (!user || password !== 'password')return res.status(401).send({
+        'error': 'Username or password is not correct'
+    })
+    
+    return res.status(200).send(user);
+    
+})
 
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-    console.log('Server is running at port ', port)
+    console.log(`Server is running at http://localhost:${port}`)
 })
 
 module.exports = app;

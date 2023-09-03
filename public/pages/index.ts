@@ -101,9 +101,18 @@ export const homePage = `<!DOCTYPE html>
             <a href="/api/products">api/products</a>
             <button onclick="copyEndpoint('/api/products')">copy</button>
         </span>
-        <div>Params are category:String, limit:Number, skip:Number, query:String</string>
-        
-    </div>
+            <strong>Params are category:String, limit:Number, skip:Number, query:String</strong>
+        </div>
+       
+        <div class="links">
+            <span class="title">Login POST</span>
+            <span class="endpoint">
+                <a href="/api/auth/login">api/auth/login</a>
+                <button onclick="copyEndpoint('/api/auth/login')">copy</button>
+            </span>
+            <span>Body: password:String, username:String</span>
+        </div>
+      
     </main>
     <script>
         function copyEndpoint(endpoint){
