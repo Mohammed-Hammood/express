@@ -133,7 +133,6 @@ app.post("/api/auth/login", (req: Request, res: Response) => {
     const user = users.find(item => item.username === username);
 
 
-
     if (!user || password !== 'password') return res.status(401).send({
         'error': 'Username or password is not correct'
     })
