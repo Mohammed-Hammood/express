@@ -10,12 +10,13 @@
         "hire_date": "Dec 24, 2020",
         "username": "user_1",
         "birthday": "21-07-1993",
-        "completed_tests": 46,
-        "certification_after": 8,
-        "preshift_examiner": 10,
-        "instruction": 8,
+        "completed_tests": 3,
+        "certification_after": 44,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 24,
-        "random_number": 918
+        "random_number": 918,
+        "total_tests": 5
     },
     {
         "id": 2,
@@ -28,12 +29,13 @@
         "hire_date": "Oct 25, 2020",
         "username": "user_2",
         "birthday": "03-01-1987",
-        "completed_tests": 50,
-        "certification_after": 9,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "completed_tests": 5,
+        "certification_after": 99,
+        "preshift_examiner": true,
+        "instruction": true,
         "notifications_count": 52,
-        "random_number": 281
+        "random_number": 281,
+        "total_tests": 5
     },
     {
         "id": 3,
@@ -46,12 +48,13 @@
         "hire_date": "Nov 15, 2020",
         "username": "user_3",
         "birthday": "20-09-1985",
-        "completed_tests": 35,
-        "certification_after": 6,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 2,
+        "certification_after": 43,
+        "preshift_examiner": true,
+        "instruction": true,
         "notifications_count": 37,
-        "random_number": 552
+        "random_number": 552,
+        "total_tests": 5
     },
     {
         "id": 4,
@@ -64,12 +67,13 @@
         "hire_date": "Jan 23, 2021",
         "username": "user_4",
         "birthday": "06-07-1992",
-        "completed_tests": 4,
-        "certification_after": 15,
-        "preshift_examiner": 10,
-        "instruction": 10,
+        "completed_tests": 5,
+        "certification_after": 56,
+        "preshift_examiner": null,
+        "instruction": null,
         "notifications_count": 89,
-        "random_number": 181
+        "random_number": 181,
+        "total_tests": 5
     },
     {
         "id": 5,
@@ -82,12 +86,13 @@
         "hire_date": "Dec 28, 2020",
         "username": "user_5",
         "birthday": "03-08-1989",
-        "completed_tests": 12,
-        "certification_after": 7,
-        "preshift_examiner": 10,
-        "instruction": 8,
+        "completed_tests": 2,
+        "certification_after": 90,
+        "preshift_examiner": null,
+        "instruction": null,
         "notifications_count": 84,
-        "random_number": 222
+        "random_number": 222,
+        "total_tests": 5
     },
     {
         "id": 6,
@@ -101,11 +106,12 @@
         "username": "user_6",
         "birthday": "26-09-1992",
         "completed_tests": 1,
-        "certification_after": 22,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "certification_after": 65,
+        "preshift_examiner": true,
+        "instruction": false,
         "notifications_count": 2,
-        "random_number": 545
+        "random_number": 545,
+        "total_tests": 5
     },
     {
         "id": 7,
@@ -118,12 +124,13 @@
         "hire_date": "Nov 24, 2020",
         "username": "user_7",
         "birthday": "13-06-1981",
-        "completed_tests": 16,
-        "certification_after": 19,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 1,
+        "certification_after": 76,
+        "preshift_examiner": false,
+        "instruction": false,
         "notifications_count": 29,
-        "random_number": 470
+        "random_number": 470,
+        "total_tests": 5
     },
     {
         "id": 8,
@@ -136,12 +143,13 @@
         "hire_date": "Nov 23, 2020",
         "username": "user_8",
         "birthday": "20-01-1994",
-        "completed_tests": 21,
-        "certification_after": 16,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 5,
+        "certification_after": 77,
+        "preshift_examiner": null,
+        "instruction": null,
         "notifications_count": 17,
-        "random_number": 460
+        "random_number": 460,
+        "total_tests": 5
     },
     {
         "id": 9,
@@ -154,12 +162,13 @@
         "hire_date": "Sep 7, 2020",
         "username": "user_9",
         "birthday": "11-11-1981",
-        "completed_tests": 38,
-        "certification_after": 15,
-        "preshift_examiner": 10,
-        "instruction": 10,
+        "completed_tests": 1,
+        "certification_after": 10,
+        "preshift_examiner": true,
+        "instruction": true,
         "notifications_count": 13,
-        "random_number": 250
+        "random_number": 250,
+        "total_tests": 5
     },
     {
         "id": 10,
@@ -172,12 +181,13 @@
         "hire_date": "Oct 25, 2020",
         "username": "user_10",
         "birthday": "17-01-1996",
-        "completed_tests": 11,
-        "certification_after": 21,
-        "preshift_examiner": 10,
-        "instruction": 10,
+        "completed_tests": 5,
+        "certification_after": 8,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 35,
-        "random_number": 910
+        "random_number": 910,
+        "total_tests": 5
     },
     {
         "id": 11,
@@ -190,12 +200,13 @@
         "hire_date": "Nov 22, 2020",
         "username": "user_11",
         "birthday": "16-07-1997",
-        "completed_tests": 45,
-        "certification_after": 22,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 1,
+        "certification_after": 24,
+        "preshift_examiner": true,
+        "instruction": true,
         "notifications_count": 11,
-        "random_number": 108
+        "random_number": 108,
+        "total_tests": 5
     },
     {
         "id": 12,
@@ -208,12 +219,13 @@
         "hire_date": "Nov 18, 2020",
         "username": "user_12",
         "birthday": "02-01-1994",
-        "completed_tests": 4,
-        "certification_after": 13,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 5,
+        "certification_after": 58,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 56,
-        "random_number": 468
+        "random_number": 468,
+        "total_tests": 5
     },
     {
         "id": 13,
@@ -226,12 +238,13 @@
         "hire_date": "Nov 12, 2020",
         "username": "user_13",
         "birthday": "01-01-1988",
-        "completed_tests": 17,
-        "certification_after": 5,
-        "preshift_examiner": 10,
-        "instruction": 7,
+        "completed_tests": 2,
+        "certification_after": 3,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 54,
-        "random_number": 41
+        "random_number": 41,
+        "total_tests": 5
     },
     {
         "id": 14,
@@ -244,12 +257,13 @@
         "hire_date": "Sep 28, 2020",
         "username": "user_14",
         "birthday": "21-02-1999",
-        "completed_tests": 26,
-        "certification_after": 14,
-        "preshift_examiner": 10,
-        "instruction": 1,
+        "completed_tests": 2,
+        "certification_after": 36,
+        "preshift_examiner": false,
+        "instruction": true,
         "notifications_count": 23,
-        "random_number": 314
+        "random_number": 314,
+        "total_tests": 5
     },
     {
         "id": 15,
@@ -262,12 +276,13 @@
         "hire_date": "Dec 15, 2020",
         "username": "user_15",
         "birthday": "25-01-1999",
-        "completed_tests": 6,
-        "certification_after": 8,
-        "preshift_examiner": 10,
-        "instruction": 7,
+        "completed_tests": 4,
+        "certification_after": 14,
+        "preshift_examiner": false,
+        "instruction": null,
         "notifications_count": 22,
-        "random_number": 499
+        "random_number": 499,
+        "total_tests": 5
     },
     {
         "id": 16,
@@ -280,12 +295,13 @@
         "hire_date": "Sep 13, 2020",
         "username": "user_16",
         "birthday": "05-01-1988",
-        "completed_tests": 39,
-        "certification_after": 8,
-        "preshift_examiner": 10,
-        "instruction": 10,
+        "completed_tests": 2,
+        "certification_after": 48,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 7,
-        "random_number": 806
+        "random_number": 806,
+        "total_tests": 5
     },
     {
         "id": 17,
@@ -298,12 +314,13 @@
         "hire_date": "Jan 20, 2021",
         "username": "user_17",
         "birthday": "23-03-1981",
-        "completed_tests": 11,
-        "certification_after": 11,
-        "preshift_examiner": 10,
-        "instruction": 6,
+        "completed_tests": 0,
+        "certification_after": 63,
+        "preshift_examiner": true,
+        "instruction": false,
         "notifications_count": 81,
-        "random_number": 188
+        "random_number": 188,
+        "total_tests": 5
     },
     {
         "id": 18,
@@ -316,12 +333,13 @@
         "hire_date": "Nov 24, 2020",
         "username": "user_18",
         "birthday": "15-11-1983",
-        "completed_tests": 28,
-        "certification_after": 2,
-        "preshift_examiner": 10,
-        "instruction": 9,
+        "completed_tests": 0,
+        "certification_after": 81,
+        "preshift_examiner": true,
+        "instruction": true,
         "notifications_count": 97,
-        "random_number": 702
+        "random_number": 702,
+        "total_tests": 5
     },
     {
         "id": 19,
@@ -334,12 +352,13 @@
         "hire_date": "Sep 5, 2020",
         "username": "user_19",
         "birthday": "03-04-1998",
-        "completed_tests": 5,
-        "certification_after": 17,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "completed_tests": 1,
+        "certification_after": 46,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 24,
-        "random_number": 612
+        "random_number": 612,
+        "total_tests": 5
     },
     {
         "id": 20,
@@ -352,12 +371,13 @@
         "hire_date": "Dec 15, 2020",
         "username": "user_20",
         "birthday": "14-03-1998",
-        "completed_tests": 1,
-        "certification_after": 12,
-        "preshift_examiner": 10,
-        "instruction": 5,
+        "completed_tests": 2,
+        "certification_after": 64,
+        "preshift_examiner": true,
+        "instruction": true,
         "notifications_count": 27,
-        "random_number": 676
+        "random_number": 676,
+        "total_tests": 5
     },
     {
         "id": 21,
@@ -370,12 +390,13 @@
         "hire_date": "Nov 17, 2020",
         "username": "user_21",
         "birthday": "08-05-1981",
-        "completed_tests": 28,
-        "certification_after": 1,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 4,
+        "certification_after": 76,
+        "preshift_examiner": false,
+        "instruction": true,
         "notifications_count": 61,
-        "random_number": 961
+        "random_number": 961,
+        "total_tests": 5
     },
     {
         "id": 22,
@@ -388,12 +409,13 @@
         "hire_date": "Sep 18, 2020",
         "username": "user_22",
         "birthday": "14-11-1981",
-        "completed_tests": 41,
-        "certification_after": 9,
-        "preshift_examiner": 10,
-        "instruction": 7,
+        "completed_tests": 4,
+        "certification_after": 39,
+        "preshift_examiner": null,
+        "instruction": null,
         "notifications_count": 71,
-        "random_number": 832
+        "random_number": 832,
+        "total_tests": 5
     },
     {
         "id": 23,
@@ -406,12 +428,13 @@
         "hire_date": "Sep 23, 2020",
         "username": "user_23",
         "birthday": "17-04-1990",
-        "completed_tests": 26,
-        "certification_after": 12,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 2,
+        "certification_after": 82,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 1,
-        "random_number": 622
+        "random_number": 622,
+        "total_tests": 5
     },
     {
         "id": 24,
@@ -424,12 +447,13 @@
         "hire_date": "Dec 2, 2020",
         "username": "user_24",
         "birthday": "11-08-1985",
-        "completed_tests": 22,
-        "certification_after": 18,
-        "preshift_examiner": 10,
-        "instruction": 5,
+        "completed_tests": 0,
+        "certification_after": 41,
+        "preshift_examiner": false,
+        "instruction": false,
         "notifications_count": 28,
-        "random_number": 560
+        "random_number": 560,
+        "total_tests": 5
     },
     {
         "id": 25,
@@ -442,12 +466,13 @@
         "hire_date": "Jan 1, 2021",
         "username": "user_25",
         "birthday": "03-04-1983",
-        "completed_tests": 9,
-        "certification_after": 8,
-        "preshift_examiner": 10,
-        "instruction": 10,
+        "completed_tests": 0,
+        "certification_after": 70,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 92,
-        "random_number": 454
+        "random_number": 454,
+        "total_tests": 5
     },
     {
         "id": 26,
@@ -460,12 +485,13 @@
         "hire_date": "Jan 20, 2021",
         "username": "user_26",
         "birthday": "01-05-1991",
-        "completed_tests": 42,
-        "certification_after": 12,
-        "preshift_examiner": 10,
-        "instruction": 7,
+        "completed_tests": 1,
+        "certification_after": 26,
+        "preshift_examiner": false,
+        "instruction": true,
         "notifications_count": 25,
-        "random_number": 321
+        "random_number": 321,
+        "total_tests": 5
     },
     {
         "id": 27,
@@ -478,12 +504,13 @@
         "hire_date": "Dec 24, 2020",
         "username": "user_27",
         "birthday": "11-07-1992",
-        "completed_tests": 39,
-        "certification_after": 17,
-        "preshift_examiner": 10,
-        "instruction": 6,
+        "completed_tests": 0,
+        "certification_after": 35,
+        "preshift_examiner": null,
+        "instruction": false,
         "notifications_count": 28,
-        "random_number": 835
+        "random_number": 835,
+        "total_tests": 5
     },
     {
         "id": 28,
@@ -496,12 +523,13 @@
         "hire_date": "Oct 5, 2020",
         "username": "user_28",
         "birthday": "23-01-1993",
-        "completed_tests": 50,
-        "certification_after": 4,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "completed_tests": 1,
+        "certification_after": 28,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 82,
-        "random_number": 635
+        "random_number": 635,
+        "total_tests": 5
     },
     {
         "id": 29,
@@ -514,12 +542,13 @@
         "hire_date": "Sep 7, 2020",
         "username": "user_29",
         "birthday": "06-10-1994",
-        "completed_tests": 4,
-        "certification_after": 5,
-        "preshift_examiner": 10,
-        "instruction": 4,
+        "completed_tests": 1,
+        "certification_after": 18,
+        "preshift_examiner": true,
+        "instruction": false,
         "notifications_count": 95,
-        "random_number": 314
+        "random_number": 314,
+        "total_tests": 5
     },
     {
         "id": 30,
@@ -532,12 +561,13 @@
         "hire_date": "Dec 1, 2020",
         "username": "user_30",
         "birthday": "11-04-1987",
-        "completed_tests": 15,
-        "certification_after": 12,
-        "preshift_examiner": 10,
-        "instruction": 6,
+        "completed_tests": 5,
+        "certification_after": 56,
+        "preshift_examiner": false,
+        "instruction": false,
         "notifications_count": 53,
-        "random_number": 31
+        "random_number": 31,
+        "total_tests": 5
     },
     {
         "id": 31,
@@ -550,12 +580,13 @@
         "hire_date": "Dec 13, 2020",
         "username": "user_31",
         "birthday": "06-09-1995",
-        "completed_tests": 43,
-        "certification_after": 22,
-        "preshift_examiner": 10,
-        "instruction": 1,
+        "completed_tests": 3,
+        "certification_after": 16,
+        "preshift_examiner": null,
+        "instruction": null,
         "notifications_count": 96,
-        "random_number": 750
+        "random_number": 750,
+        "total_tests": 5
     },
     {
         "id": 32,
@@ -568,12 +599,13 @@
         "hire_date": "Oct 3, 2020",
         "username": "user_32",
         "birthday": "01-02-1997",
-        "completed_tests": 21,
-        "certification_after": 5,
-        "preshift_examiner": 10,
-        "instruction": 4,
+        "completed_tests": 2,
+        "certification_after": 28,
+        "preshift_examiner": true,
+        "instruction": false,
         "notifications_count": 6,
-        "random_number": 509
+        "random_number": 509,
+        "total_tests": 5
     },
     {
         "id": 33,
@@ -586,12 +618,13 @@
         "hire_date": "Sep 20, 2020",
         "username": "user_33",
         "birthday": "14-04-1985",
-        "completed_tests": 12,
-        "certification_after": 15,
-        "preshift_examiner": 10,
-        "instruction": 4,
+        "completed_tests": 1,
+        "certification_after": 73,
+        "preshift_examiner": false,
+        "instruction": true,
         "notifications_count": 57,
-        "random_number": 504
+        "random_number": 504,
+        "total_tests": 5
     },
     {
         "id": 34,
@@ -604,12 +637,13 @@
         "hire_date": "Dec 5, 2020",
         "username": "user_34",
         "birthday": "06-03-1984",
-        "completed_tests": 16,
-        "certification_after": 1,
-        "preshift_examiner": 10,
-        "instruction": 9,
+        "completed_tests": 2,
+        "certification_after": 87,
+        "preshift_examiner": true,
+        "instruction": false,
         "notifications_count": 54,
-        "random_number": 185
+        "random_number": 185,
+        "total_tests": 5
     },
     {
         "id": 35,
@@ -622,12 +656,13 @@
         "hire_date": "Sep 18, 2020",
         "username": "user_35",
         "birthday": "27-01-1984",
-        "completed_tests": 32,
-        "certification_after": 16,
-        "preshift_examiner": 10,
-        "instruction": 4,
+        "completed_tests": 5,
+        "certification_after": 32,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 66,
-        "random_number": 123
+        "random_number": 123,
+        "total_tests": 5
     },
     {
         "id": 36,
@@ -640,12 +675,13 @@
         "hire_date": "Oct 10, 2020",
         "username": "user_36",
         "birthday": "10-06-1983",
-        "completed_tests": 9,
-        "certification_after": 13,
-        "preshift_examiner": 10,
-        "instruction": 4,
+        "completed_tests": 0,
+        "certification_after": 10,
+        "preshift_examiner": false,
+        "instruction": true,
         "notifications_count": 44,
-        "random_number": 211
+        "random_number": 211,
+        "total_tests": 5
     },
     {
         "id": 37,
@@ -658,12 +694,13 @@
         "hire_date": "Jan 13, 2021",
         "username": "user_37",
         "birthday": "05-10-1982",
-        "completed_tests": 23,
-        "certification_after": 15,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "completed_tests": 3,
+        "certification_after": 94,
+        "preshift_examiner": true,
+        "instruction": false,
         "notifications_count": 94,
-        "random_number": 872
+        "random_number": 872,
+        "total_tests": 5
     },
     {
         "id": 38,
@@ -676,12 +713,13 @@
         "hire_date": "Sep 13, 2020",
         "username": "user_38",
         "birthday": "18-08-1985",
-        "completed_tests": 48,
-        "certification_after": 6,
-        "preshift_examiner": 10,
-        "instruction": 1,
+        "completed_tests": 1,
+        "certification_after": 64,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 30,
-        "random_number": 585
+        "random_number": 585,
+        "total_tests": 5
     },
     {
         "id": 39,
@@ -694,12 +732,13 @@
         "hire_date": "Jan 13, 2021",
         "username": "user_39",
         "birthday": "18-07-1980",
-        "completed_tests": 50,
-        "certification_after": 21,
-        "preshift_examiner": 10,
-        "instruction": 8,
+        "completed_tests": 2,
+        "certification_after": 81,
+        "preshift_examiner": true,
+        "instruction": true,
         "notifications_count": 79,
-        "random_number": 950
+        "random_number": 950,
+        "total_tests": 5
     },
     {
         "id": 40,
@@ -712,12 +751,13 @@
         "hire_date": "Oct 13, 2020",
         "username": "user_40",
         "birthday": "27-11-1995",
-        "completed_tests": 9,
-        "certification_after": 2,
-        "preshift_examiner": 10,
-        "instruction": 6,
+        "completed_tests": 0,
+        "certification_after": 1,
+        "preshift_examiner": null,
+        "instruction": null,
         "notifications_count": 23,
-        "random_number": 65
+        "random_number": 65,
+        "total_tests": 5
     },
     {
         "id": 41,
@@ -730,12 +770,13 @@
         "hire_date": "Dec 2, 2020",
         "username": "user_41",
         "birthday": "07-01-1999",
-        "completed_tests": 40,
-        "certification_after": 2,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "completed_tests": 1,
+        "certification_after": 29,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 34,
-        "random_number": 421
+        "random_number": 421,
+        "total_tests": 5
     },
     {
         "id": 42,
@@ -748,12 +789,13 @@
         "hire_date": "Sep 23, 2020",
         "username": "user_42",
         "birthday": "26-06-1998",
-        "completed_tests": 48,
-        "certification_after": 1,
-        "preshift_examiner": 10,
-        "instruction": 6,
+        "completed_tests": 2,
+        "certification_after": 35,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 97,
-        "random_number": 925
+        "random_number": 925,
+        "total_tests": 5
     },
     {
         "id": 43,
@@ -766,12 +808,13 @@
         "hire_date": "Nov 28, 2020",
         "username": "user_43",
         "birthday": "04-06-1991",
-        "completed_tests": 4,
-        "certification_after": 7,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "completed_tests": 2,
+        "certification_after": 85,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 37,
-        "random_number": 843
+        "random_number": 843,
+        "total_tests": 5
     },
     {
         "id": 44,
@@ -784,12 +827,13 @@
         "hire_date": "Nov 15, 2020",
         "username": "user_44",
         "birthday": "23-08-1985",
-        "completed_tests": 45,
-        "certification_after": 13,
-        "preshift_examiner": 10,
-        "instruction": 9,
+        "completed_tests": 1,
+        "certification_after": 1,
+        "preshift_examiner": false,
+        "instruction": true,
         "notifications_count": 2,
-        "random_number": 693
+        "random_number": 693,
+        "total_tests": 5
     },
     {
         "id": 45,
@@ -802,12 +846,13 @@
         "hire_date": "Oct 28, 2020",
         "username": "user_45",
         "birthday": "22-06-1987",
-        "completed_tests": 3,
-        "certification_after": 22,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 5,
+        "certification_after": 53,
+        "preshift_examiner": false,
+        "instruction": null,
         "notifications_count": 86,
-        "random_number": 64
+        "random_number": 64,
+        "total_tests": 5
     },
     {
         "id": 46,
@@ -820,12 +865,13 @@
         "hire_date": "Jan 14, 2021",
         "username": "user_46",
         "birthday": "14-01-1995",
-        "completed_tests": 33,
-        "certification_after": 10,
-        "preshift_examiner": 10,
-        "instruction": 3,
+        "completed_tests": 3,
+        "certification_after": 57,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 71,
-        "random_number": 386
+        "random_number": 386,
+        "total_tests": 5
     },
     {
         "id": 47,
@@ -838,12 +884,13 @@
         "hire_date": "Oct 9, 2020",
         "username": "user_47",
         "birthday": "06-02-1982",
-        "completed_tests": 32,
-        "certification_after": 16,
-        "preshift_examiner": 10,
-        "instruction": 9,
+        "completed_tests": 2,
+        "certification_after": 85,
+        "preshift_examiner": false,
+        "instruction": true,
         "notifications_count": 6,
-        "random_number": 508
+        "random_number": 508,
+        "total_tests": 5
     },
     {
         "id": 48,
@@ -856,12 +903,13 @@
         "hire_date": "Jan 16, 2021",
         "username": "user_48",
         "birthday": "16-04-1997",
-        "completed_tests": 4,
-        "certification_after": 19,
-        "preshift_examiner": 10,
-        "instruction": 2,
+        "completed_tests": 0,
+        "certification_after": 92,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 66,
-        "random_number": 572
+        "random_number": 572,
+        "total_tests": 5
     },
     {
         "id": 49,
@@ -874,12 +922,13 @@
         "hire_date": "Jan 14, 2021",
         "username": "user_49",
         "birthday": "21-10-1997",
-        "completed_tests": 40,
-        "certification_after": 17,
-        "preshift_examiner": 10,
-        "instruction": 8,
+        "completed_tests": 5,
+        "certification_after": 87,
+        "preshift_examiner": true,
+        "instruction": null,
         "notifications_count": 15,
-        "random_number": 195
+        "random_number": 195,
+        "total_tests": 5
     },
     {
         "id": 50,
@@ -892,12 +941,13 @@
         "hire_date": "Dec 15, 2020",
         "username": "user_50",
         "birthday": "15-04-1987",
-        "completed_tests": 41,
-        "certification_after": 7,
-        "preshift_examiner": 10,
-        "instruction": 1,
+        "completed_tests": 1,
+        "certification_after": 40,
+        "preshift_examiner": null,
+        "instruction": true,
         "notifications_count": 90,
-        "random_number": 225
+        "random_number": 225,
+        "total_tests": 5
     },
     {
         "id": 51,
@@ -910,11 +960,31 @@
         "hire_date": "Dec 15, 2020",
         "username": "user_51",
         "birthday": "15.04.1995",
-        "completed_tests": 41,
-        "certification_after": 3,
-        "preshift_examiner": 10,
-        "instruction": 10,
-        "notifications_count": 9,
-        "random_number": 225
+        "completed_tests": 3,
+        "certification_after": 31,
+        "preshift_examiner": true,
+        "instruction": null,
+        "notifications_count": 3,
+        "random_number": 1000,
+        "total_tests": 5
+    },
+    {
+        "id": 52,
+        "name": "Юлию Кудашева Калькоф",
+        "phone": "7-991-438-7659",
+        "email": "u.kydasheva@pfsz.ru",
+        "address": "Кемерово, Притомский проспект, 11",
+        "position_name": "HR-менеджер ООО “Профсоюз”",
+        "department": "nulla. Integer vulputate, risus a ultricies adipiscing, enim mi tempor",
+        "hire_date": "Dec 15, 2020",
+        "username": "user_52",
+        "birthday": "08.04.1990",
+        "completed_tests": 4,
+        "certification_after": 20,
+        "preshift_examiner": true,
+        "instruction": true,
+        "notifications_count": 2,
+        "random_number": 1000,
+        "total_tests": 5
     }
 ]
