@@ -37,6 +37,7 @@ app.use(cors({
         "http://localhost:3001",
         "http://localhost:5173",
         "https://photo-gallery10.vercel.app",
+        "https://universities-search.vercel.app",
         "https://events-history.vercel.app",
         "https://users-contacts.vercel.app",
         "https://users-contact.vercel.app",
@@ -78,7 +79,7 @@ app.get("/api/universities/", (req: Request, res: Response) => {
     }
 
     if (country && typeof country === 'string') {
-        data = data.filter(item => item.country.toLowerCase().includes(country.toLowerCase()))
+        data = data.filter(item => country === "all" || item.country.toLowerCase().includes(country.toLowerCase()))
     }
 
     data = data.filter((_, index: number) => index >= skip && index < limit);
