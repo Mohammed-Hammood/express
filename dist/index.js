@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const events_json_1 = __importDefault(require("./public/data/events.json"));
 const images_json_1 = __importDefault(require("./public/data/images.json"));
 const users_json_1 = __importDefault(require("./public/data/users.json"));
+const universities_json_1 = __importDefault(require("./public/data/universities.json"));
 const proudcts_json_1 = __importDefault(require("./public/data/proudcts.json"));
 const index_1 = require("./public/pages/index");
 const body_parser_1 = __importDefault(require("body-parser"));
@@ -46,6 +47,29 @@ app.get("/", function (req, res) {
 app.get("/api/events/", (req, res) => {
     res.status(200);
     res.send(events_json_1.default);
+});
+app.get("/api/universities/", (req, res) => {
+    const { query: q, limit: limit_, skip: skip_, country } = req.query;
+    let data = universities_json_1.default;
+    const query = q && typeof q === 'string' && q.toString().trim().length > 0 ? q.trim().toLowerCase() : null;
+    const limit = !limit_ || (typeof limit_ === 'string' && parseInt(limit_) > 100) ? 100 : parseInt(typeof limit_ === 'string' ? limit_ : "10");
+    const skip = typeof skip_ === 'string' && parseInt(skip_) >= 0 ? parseInt(skip_) : 0;
+    if (query) {
+        data = data.filter(item => item.name.toLowerCase().includes(query));
+    }
+    if (country && typeof country === 'string') {
+        data = data.filter(item => item.country.toLowerCase().includes(country.toLowerCase()));
+    }
+    data = data.filter((_, index) => index >= skip && index < limit);
+    let total = data.length;
+    res.status(200).send({
+        ok: true,
+        data,
+        total,
+        query,
+        limit,
+        skip,
+    });
 });
 app.get("/api/products/", (req, res) => {
     const { query, category, limit, skip } = req.query;

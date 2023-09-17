@@ -113,6 +113,15 @@ export const homePage = `<!DOCTYPE html>
             <span>Body: password:String, username:String</span>
         </div>
       
+        <div class="links">
+            <span class="title">Universities GET</span>
+            <span class="endpoint">
+                <a href="/api/universities">api/auth/login</a>
+                <button onclick="copyEndpoint('/api/universities')">copy</button>
+            </span>
+            <span>Params: query?:String, country?:String, limit?:Number (max: 100), skip?: Number</span>
+        </div>
+
     </main>
     <script>
         function copyEndpoint(endpoint){

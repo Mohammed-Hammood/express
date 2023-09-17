@@ -3,6 +3,7 @@ import cors from 'cors';
 import events from './public/data/events.json';
 import images from './public/data/images.json';
 import users from './public/data/users.json';
+import universityes from './public/data/universities.json';
 import products from './public/data/proudcts.json';
 import { homePage } from './public/pages/index';
 import bodyParser from 'body-parser';
@@ -61,9 +62,42 @@ app.get("/api/events/", (req: Request, res: Response) => {
 });
 
 
+app.get("/api/universities/", (req: Request, res: Response) => {
+    const { query: q, limit: limit_, skip: skip_, country } = req.query;
+
+    let data = universityes as { id:number, name: string, domains: string[], country: string, web_pages: string[] }[];
+
+    const query: string | null = q && typeof q === 'string' && q.toString().trim().length > 0 ? q.trim().toLowerCase() : null;
+
+    const limit: number = !limit_ || (typeof limit_ === 'string' && parseInt(limit_) > 100) ? 100 : parseInt(typeof limit_ === 'string' ? limit_ : "10");
+
+    const skip: number = typeof skip_ === 'string' && parseInt(skip_) >= 0 ? parseInt(skip_): 0;
+
+    if (query) {
+        data = data.filter(item => item.name.toLowerCase().includes(query))
+    }
+
+    if (country && typeof country === 'string') {
+        data = data.filter(item => item.country.toLowerCase().includes(country.toLowerCase()))
+    }
+
+    data = data.filter((_, index: number) => index >= skip && index < limit);
+
+    let total: number = data.length;
+
+    res.status(200).send({
+        ok: true,
+        data,
+        total,
+        query,
+        limit,
+        skip,
+    })
+})
+
 app.get("/api/products/", (req: Request, res: Response) => {
     const { query, category, limit, skip } = req.query;
-    
+
     let data = products;
 
     if (category) {
@@ -144,7 +178,7 @@ app.post("/api/auth/login", (req: Request, res: Response) => {
 
 
 
- 
+
 
 const port = process.env.PORT || 5000;
 
