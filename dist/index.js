@@ -61,8 +61,8 @@ app.get("/api/universities/", (req, res) => {
     if (country && typeof country === 'string') {
         data = data.filter(item => country === "all" || item.country.toLowerCase().includes(country.toLowerCase()));
     }
-    data = data.filter((_, index) => index >= skip && index < limit);
     let total = data.length;
+    data = data.filter((_, index) => index >= skip && index < limit);
     res.status(200).send({
         ok: true,
         data,
@@ -84,12 +84,12 @@ app.get("/api/products/", (req, res) => {
             item.description.toLowerCase().includes(q) ||
             item.title.toLowerCase().includes(q));
     }
+    let total = data.length;
     if (limit && skip && typeof limit === 'string' && typeof skip === 'string') {
         let limit_ = parseInt(limit);
         let skip_ = parseInt(skip);
         data = data.filter((_, index) => index >= skip_ && index < limit_);
     }
-    let total = data.length;
     res.status(200).send({
         ok: true,
         data,
