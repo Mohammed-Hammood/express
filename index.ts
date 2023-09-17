@@ -84,7 +84,7 @@ app.get("/api/universities/", (req: Request, res: Response) => {
     
     let total: number = data.length;
 
-    data = data.filter((_, index: number) => index >= skip && index < limit);
+    data = data.filter((_, index: number) => index >= skip && index < (skip + limit));
 
     res.status(200).send({
         ok: true,

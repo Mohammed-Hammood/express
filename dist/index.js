@@ -62,7 +62,7 @@ app.get("/api/universities/", (req, res) => {
         data = data.filter(item => country === "all" || item.country.toLowerCase().includes(country.toLowerCase()));
     }
     let total = data.length;
-    data = data.filter((_, index) => index >= skip && index < limit);
+    data = data.filter((_, index) => index >= skip && index < (skip + limit));
     res.status(200).send({
         ok: true,
         data,
