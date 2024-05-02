@@ -7,6 +7,7 @@ import universityes from './public/data/universities.json';
 import products from './public/data/proudcts.json';
 import { homePage } from './public/pages/index';
 import bodyParser from 'body-parser';
+import { gamesList } from './data';
 
 // import fetch   from 'node-fetch';
 // import htmlIndexPage from './public/pages/index.html'
@@ -17,11 +18,12 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const path = require("path");
+// const path = require("path");
 
 const app: Express = express();
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', './views')
 app.set('view engine', 'ejs');
@@ -179,6 +181,55 @@ app.post("/api/auth/login", (req: Request, res: Response) => {
 
 })
 
+
+interface ParamsT {
+    limit?: string,
+    query?: string,
+    page?: string,
+    category?: string,
+    order?: "id" | "-id",
+    language?: string,
+}
+
+
+app.get("/api/games", (req, reply) => {
+    let games = gamesList;
+    const { query, language, page: _p, limit: _l, order } = req.query as ParamsT
+
+    const page = parseInt(_p ?? '1');
+    let limit = parseInt(_l ?? '10');
+
+    if (limit > 100) limit = 10;
+    const max = page * limit;
+    const min = max - limit;
+
+    if (query && query.trim().length > 0) {
+        const search = (text: string) => query.trim().toLowerCase().includes(text) || text.toLowerCase().includes(query.toLowerCase());
+
+        games = games.filter(item => search(item.description) || search(item.title) || item.developers.some(d => search(d)));
+
+    }
+
+    if (language && language.trim().length > 0 && language.toLowerCase() !== 'all') {
+
+        games = games.filter(item => item.available_languages.some(L => L.toLowerCase().includes(language)));
+
+    }
+    const games_count = games.length;
+
+    games = games.sort((a, b) => order === 'id' ? a.id - b.id : b.id - a.id).filter((_, i) => i >= min && i < max);
+
+
+    const query_params = { limit, page, query, language, max, min, }
+
+    reply.send({
+        query_params,
+        ok: true,
+        games_count,
+        status: 200,
+        games,
+    })
+})
 
 
 
