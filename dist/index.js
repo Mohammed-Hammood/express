@@ -26,7 +26,8 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
-app.use((0, cors_1.default)({
+/*
+app.use(cors({
     origin: [
         "http://localhost:3000",
         "http://localhost:3001",
@@ -40,6 +41,9 @@ app.use((0, cors_1.default)({
         "https://online-market-1.vercel.app",
     ]
 }));
+
+*/
+app.use((0, cors_1.default)());
 // app.use('/static', express.static(path.join(__dirname, 'public')));
 app.get("/", function (req, res) {
     res.status(200);
@@ -113,9 +117,28 @@ app.get("/api/users/", (req, res) => {
     res.status(200);
     res.send(users_json_1.default);
 });
+/* app.get("/api/images/", (req: Request, res: Response) => {
+    res.send(images)
+}) */
 app.get("/api/images/", (req, res) => {
-    // res.sendFile(path.join(__dirname, 'pages/index.html'));
-    res.send(images_json_1.default);
+    const { page = "1", limit = "10" } = req.query;
+    const pageNum = Math.max(1, parseInt(page, 10) || 1);
+    let limitNum = parseInt(limit, 10) || 10;
+    if (limitNum > 100)
+        limitNum = 100;
+    if (limitNum < 1)
+        limitNum = 10;
+    const skip = (pageNum - 1) * limitNum;
+    const total = images_json_1.default.images.length;
+    const paginatedImages = images_json_1.default.images.slice(skip, skip + limitNum);
+    res.status(200).json({
+        ok: true,
+        data: paginatedImages,
+        total,
+        page: pageNum,
+        limit: limitNum,
+        query: null,
+    });
 });
 app.post("/api/auth/login", (req, res) => {
     const { username, password } = req.body;

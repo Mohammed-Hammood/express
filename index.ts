@@ -166,15 +166,12 @@ app.get("/api/images/", (req: Request, res: Response) => {
   if (limitNum < 1) limitNum = 10;
 
   const skip = (pageNum - 1) * limitNum;
-  const total = images.length;
-  const paginatedImages = images.slice(skip, skip + limitNum);
+  const total = images.images.length;
+  const paginatedImages = images.images.slice(skip, skip + limitNum);
 
   res.status(200).json({
     ok: true,
-    data: paginatedImages.map((url: string, index: number) => ({
-      id: skip + index + 1,
-      url
-    })),
+    data: paginatedImages,
     total,
     page: pageNum,
     limit: limitNum,
