@@ -33,6 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+/*
 app.use(cors({
     origin: [
         "http://localhost:3000",
@@ -48,7 +49,8 @@ app.use(cors({
     ]
 }));
 
-
+*/
+app.use(cors());
 // app.use('/static', express.static(path.join(__dirname, 'public')));
 
 
@@ -152,11 +154,33 @@ app.get("/api/users/", (req: Request, res: Response) => {
 })
 
 
-app.get("/api/images/", (req: Request, res: Response) => {
-    // res.sendFile(path.join(__dirname, 'pages/index.html'));
-
+/* app.get("/api/images/", (req: Request, res: Response) => {
     res.send(images)
-})
+}) */
+app.get("/api/images/", (req: Request, res: Response) => {
+  const { page = "1", limit = "10" } = req.query;
+
+  const pageNum = Math.max(1, parseInt(page as string, 10) || 1);
+  let limitNum = parseInt(limit as string, 10) || 10;
+  if (limitNum > 100) limitNum = 100;
+  if (limitNum < 1) limitNum = 10;
+
+  const skip = (pageNum - 1) * limitNum;
+  const total = images.length;
+  const paginatedImages = images.slice(skip, skip + limitNum);
+
+  res.status(200).json({
+    ok: true,
+    data: paginatedImages.map((url: string, index: number) => ({
+      id: skip + index + 1,
+      url
+    })),
+    total,
+    page: pageNum,
+    limit: limitNum,
+    query: null,
+  });
+});
 
 
 
