@@ -75,6 +75,7 @@ export const homePage = `<!DOCTYPE html>
                 <a href="/api/images">api/images</a>
                 <button onclick="copyEndpoint('/api/images')">copy</button>
             </span>
+            <span>Params: page:Number, limit:Number</span>
         </div>
         <div class="links">
             <span class="title">Events </span>
